@@ -1,20 +1,12 @@
 import styled, { css } from "styled-components";
 import SectionInnerHeading from "../Typography/SectionInnerHeading";
+import { theme } from "../../theme/theme";
 
 interface StyledButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   color?: keyof typeof theme;
   variant?: "outlined" | "contained" | "text";
 }
-
-const theme = {
-  black: "#000000",
-  white: "#FFFFFF",
-  main: "#006EFD",
-  hover: {
-    main: "#E2E2E2",
-  },
-};
 
 const outlinedVariantButton = css<StyledButtonProps>`
   background-color: transparent;
@@ -30,7 +22,8 @@ const outlinedVariantButton = css<StyledButtonProps>`
 `;
 
 const containedVariantButton = css<StyledButtonProps>`
-  background-color: ${({ theme, color }) => theme[color || "main"]};
+  background-color: ${({ theme, color }) =>
+    theme[color || "main"] || theme.main};
 
   &:hover {
     background-color: ${({ theme, color }) => theme.hover[color || "main"]};
