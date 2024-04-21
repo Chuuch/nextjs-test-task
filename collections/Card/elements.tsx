@@ -55,6 +55,11 @@ export const StyledCardContainer = styled(
   background-repeat: no-repeat;
   background-size: contain;
 
+  @media (max-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+  }
+
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
@@ -62,7 +67,6 @@ export const StyledCardContainer = styled(
 
   @media (max-width: 768px) {
     position: relative;
-    flex-direction: column;
     background-image: url(${(props) => props.backgroundImage});
     background-repeat: no-repeat;
     background-position: left;
@@ -71,7 +75,9 @@ export const StyledCardContainer = styled(
 `;
 
 export const StyledImageContainer = styled(
-  (props: React.HTMLAttributes<HTMLDivElement>) => <div {...props} />
+  (
+    props: React.HTMLAttributes<HTMLDivElement> & { backgroundImage: string }
+  ) => <div {...props} />
 )`
   display: flex;
   flex-direction: row;
@@ -80,6 +86,13 @@ export const StyledImageContainer = styled(
   width: 100%;
   height: 100%;
   margin-left: 24rem;
+
+  @media (max-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;гд 
+  }
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -156,6 +169,7 @@ export const StyledSingleSelection = styled(
     justify-content: center;
     justify-items: center;
     width: ${(props) => props.mobileWidth}px;
+  }
 `;
 
 export const StyledSelectionTextContainer = styled(

@@ -95,7 +95,7 @@ const Card: React.FC<CardProps> = ({
           <StyledCardDescription>{sectionDescription}</StyledCardDescription>
         </StyledTextContainer>
         <StyledCardContainer backgroundImage={backGroundImage.src}>
-          <StyledImageContainer>
+          <StyledImageContainer backgroundImage={backGroundImage.src}>
             <Image
               layout="responsive"
               src={videoImage.src}
