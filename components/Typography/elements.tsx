@@ -32,7 +32,7 @@ export const StyledSectionSubheading = styled(
   ))
 )`
   font-family: Poppins;
-  font-size: 1.25rem;
+  font-size: 2rem;
   line-height: 1.875rem;
   font-weight: 300;
 `;
