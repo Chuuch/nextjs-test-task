@@ -91,7 +91,7 @@ export const StyledImageContainer = styled(
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;гд 
+    height: 100%;
   }
 
   @media (max-width: 1024px) {
