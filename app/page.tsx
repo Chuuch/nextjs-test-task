@@ -27,6 +27,22 @@ const heroProps: HeroProps = {
   ctaText: "Start",
 };
 
+export type Selection = {
+  title: string;
+  description: string;
+  width: number;
+  height: number;
+  mobileWidth: number;
+  mobileHeight: number;
+  selectionColor: string;
+  logo: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+};
+
 interface CardProps {
   backGroundImage: {
     src: string;
@@ -42,54 +58,7 @@ interface CardProps {
   };
   sectionTitle: string;
   sectionDescription: string;
-
-  selections: [
-    {
-      title: string;
-      description: string;
-      width: number;
-      height: number;
-      mobileWidth: number;
-      mobileHeight: number;
-      selectionColor: string;
-      logo: {
-        src: string;
-        alt: string;
-        width: number;
-        height: number;
-      };
-    },
-    {
-      title: string;
-      description: string;
-      width: number;
-      height: number;
-      mobileWidth: number;
-      mobileHeight: number;
-      selectionColor: string;
-      logo: {
-        src: string;
-        alt: string;
-        width: number;
-        height: number;
-      };
-    },
-    {
-      title: string;
-      description: string;
-      width: number;
-      height: number;
-      mobileWidth: number;
-      mobileHeight: number;
-      selectionColor: string;
-      logo: {
-        src: string;
-        alt: string;
-        width: number;
-        height: number;
-      };
-    }
-  ];
+  selections: Selection[];
 }
 
 const cardProps: CardProps = {
@@ -144,7 +113,7 @@ const cardProps: CardProps = {
       title: "Pitch",
       description:
         "Comprehensive pitch management, including comms, diary management and pitch hosting",
-      width: 720,
+      width: 650,
       height: 32,
       mobileWidth: 580,
       mobileHeight: 32,

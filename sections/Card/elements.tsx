@@ -86,6 +86,8 @@ export const StyledImageContainer = styled(
   width: 100%;
   height: 100%;
   margin-left: 24rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 
   @media (max-width: 1440px) {
     display: flex;
@@ -111,6 +113,11 @@ export const StyledCardDescription = styled(
 )`
   font-family: Poppins;
   font-size: 1.5rem;
+
+  @media (max-width: 414px) {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
 `;
 
 export const StyledSelectionsContainer = styled(
@@ -127,6 +134,16 @@ export const StyledSelectionsContainer = styled(
   @media (max-width: 768px) {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @media (max-width: 375px) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  @media (max-width: 414px) {
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
 `;
 
@@ -170,6 +187,26 @@ export const StyledSingleSelection = styled(
     justify-items: center;
     width: ${(props) => props.mobileWidth}px;
   }
+
+  @media only screen and (max-width: 375px) {
+    display: flex;
+    min-height: 8rem;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    width: ${(props) => props.mobileWidth}px;
+  }
+
+  @media only screen and (max-width: 414px) {
+    display: flex;
+    min-height: 8rem;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    width: ${(props) => props.mobileWidth}px;
+  }
 `;
 
 export const StyledSelectionTextContainer = styled(
@@ -192,6 +229,22 @@ export const StyledSelectionTitle = styled(
     text-decoration: underline;
     color: #007fff;
   }
+
+  @media (max-width: 375px) {
+    font-family: Poppins;
+    font-size: 1.2rem;
+    line-height: 4.375rem;
+    font-weight: 600;
+    margin-left: 2.5rem;
+  }
+
+  @media (max-width: 414px) {
+    font-family: Poppins;
+    font-size: 1.2rem;
+    line-height: 4.375rem;
+    font-weight: 600;
+    margin-left: 2.5rem;
+  }
 `;
 
 export const StyledSelectionDescription = styled(
@@ -202,6 +255,35 @@ export const StyledSelectionDescription = styled(
   line-height: 1.7rem;
   font-weight: 500;
   margin-left: 2.5rem;
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 414px) {
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 414px) {
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    font-weight: 400;
+  }
 `;
 
 export const StyledSelectionImage = styled(
@@ -216,4 +298,16 @@ export const StyledSelectionImage = styled(
   max-width: 4rem;
   max-height: 5rem;
   margin-left: 1.5rem;
+
+  @media (max-width: 375px) {
+    max-width: 2rem;
+    max-height: 3rem;
+    margin-left: 0rem;
+  }
+
+  @media (max-width: 414px) {
+    max-width: 2rem;
+    max-height: 3rem;
+    margin-left: 1rem;
+  }
 `;

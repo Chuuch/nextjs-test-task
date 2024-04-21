@@ -15,6 +15,10 @@ export const StyledContainer = styled(
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 
   @media (max-width: 1024px) {
     display: flex;
@@ -32,6 +36,16 @@ export const StyledContainer = styled(
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.1875rem;
+    text-align: center;
+    max-width: 375px;
   }
 `;
 
@@ -90,6 +104,11 @@ export const StyledTitle = styled(
     margin-top: 2.1875rem;
     text-align: center;
   }
+
+  @media only screen and (max-width: 414px) {
+    font-size: 2rem;
+    line-height: 1.875rem;
+  }
 `;
 
 export const StyledDescription = styled(
@@ -113,6 +132,13 @@ export const StyledDescription = styled(
     justify-content: center;
     margin-top: 2.1875rem;
     text-align: center;
+  }
+
+  @media only screen and (min-width: 414px) {
+    font-size: 1.4rem;
+    line-height: 1.875rem;
+    text-align: center;
+    margin: 1.563rem 0 0;
   }
 `;
 

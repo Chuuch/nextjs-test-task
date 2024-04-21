@@ -13,6 +13,12 @@ export const StyledSectionBigHeading = styled(
   font-weight: 600;
   font-size: 3rem;
   line-height: 3.94rem;
+
+  @media (max-width: 414px) {
+    font-size: 2rem;
+    margin: 2;
+    line-height: 2.5rem;
+  }
 `;
 
 export const StyledSectionHeading = styled(
@@ -24,6 +30,13 @@ export const StyledSectionHeading = styled(
   font-size: 2.5rem;
   line-height: 4.375rem;
   font-weight: 600;
+
+  @media (max-width: 414px) {
+    font-family: Poppins;
+    font-size: 1.5rem;
+    line-height: 4.375rem;
+    font-weight: 600;
+  }
 `;
 
 export const StyledSectionSubheading = styled(

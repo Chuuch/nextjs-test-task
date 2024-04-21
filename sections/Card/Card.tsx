@@ -14,6 +14,7 @@ import {
 } from "./elements";
 import Image from "next/image";
 import { StyledSectionBigHeading } from "@/components/Typography/elements";
+import { Selection } from "@/app/page";
 
 interface CardProps {
   backGroundImage: {
@@ -30,53 +31,7 @@ interface CardProps {
   };
   sectionTitle: string;
   sectionDescription: string;
-  selections: [
-    {
-      title: string;
-      description: string;
-      width: number;
-      height: number;
-      mobileWidth: number;
-      mobileHeight: number;
-      selectionColor: string;
-      logo: {
-        src: string;
-        alt: string;
-        width: number;
-        height: number;
-      };
-    },
-    {
-      title: string;
-      description: string;
-      width: number;
-      height: number;
-      mobileWidth: number;
-      mobileHeight: number;
-      selectionColor: string;
-      logo: {
-        src: string;
-        alt: string;
-        width: number;
-        height: number;
-      };
-    },
-    {
-      title: string;
-      description: string;
-      width: number;
-      height: number;
-      mobileWidth: number;
-      mobileHeight: number;
-      selectionColor: string;
-      logo: {
-        src: string;
-        alt: string;
-        width: number;
-        height: number;
-      };
-    }
-  ];
+  selections: Selection[];
 }
 
 const Card: React.FC<CardProps> = ({
