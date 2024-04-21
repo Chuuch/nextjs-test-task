@@ -1,5 +1,5 @@
 "use client";
-import Card from "@/collections/Card/Card";
+import Card from "@/sections/Card/Card";
 /* eslint-disable @next/next/no-page-custom-font */
 import Hero from "../sections/Hero/Hero";
 import "./page.module.css";
