@@ -115,6 +115,7 @@ export const StyledDescription = styled(
   (props: React.HTMLAttributes<HTMLElement>) => <SectionSubheading {...props} />
 )`
   margin: 1.563rem 0 0;
+  display: flex;
 
   @media (max-width: 768px) {
     display: flex;
@@ -134,7 +135,7 @@ export const StyledDescription = styled(
     text-align: center;
   }
 
-  @media only screen and (min-width: 414px) {
+  @media only screen and (max-width: 414px) {
     font-size: 1.4rem;
     line-height: 1.875rem;
     text-align: center;

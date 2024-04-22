@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SVGProps } from "react";
 import styled from "styled-components";
 
 interface StyledSectionContainerProps
@@ -164,10 +164,9 @@ export const StyledSingleSelection = styled(
   justify-items: center;
   align-items: center;
   min-height: 14rem;
-  background-color: #eeeeee;
   margin-bottom: 1rem;
   margin-top: 2rem;
-  padding: 2.6rem;
+  padding: 2rem;
   border-radius: 10px;
   border: 0;
   box-sizing: border-box;
@@ -194,8 +193,8 @@ export const StyledSingleSelection = styled(
     padding: 1rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 90%;
     width: ${(props) => props.mobileWidth}px;
+    height: ${(props) => props.mobileHeight}px;
   }
 
   @media only screen and (max-width: 414px) {
@@ -214,6 +213,10 @@ export const StyledSelectionTextContainer = styled(
 )`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
+  margin-top: 2rem;
 `;
 
 export const StyledSelectionTitle = styled(
@@ -232,9 +235,9 @@ export const StyledSelectionTitle = styled(
 
   @media (max-width: 375px) {
     font-family: Poppins;
-    font-size: 1.2rem;
-    line-height: 4.375rem;
-    font-weight: 600;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 400;
     margin-left: 2.5rem;
   }
 
@@ -244,6 +247,7 @@ export const StyledSelectionTitle = styled(
     line-height: 4.375rem;
     font-weight: 600;
     margin-left: 2.5rem;
+    padding-top: 1rem;
   }
 `;
 
@@ -255,6 +259,7 @@ export const StyledSelectionDescription = styled(
   line-height: 1.7rem;
   font-weight: 500;
   margin-left: 2.5rem;
+  margin-bottom: 2rem;
 
   @media (max-width: 375px) {
     display: flex;
@@ -263,7 +268,7 @@ export const StyledSelectionDescription = styled(
     font-size: 0.8rem;
     line-height: 1rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    padding-bottom: 2rem;
   }
 
   @media (max-width: 414px) {
@@ -273,10 +278,10 @@ export const StyledSelectionDescription = styled(
     font-size: 0.8rem;
     line-height: 0.9rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 768) {
     display: flex;
     flex-direction: column;
     font-family: Poppins;

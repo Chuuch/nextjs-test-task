@@ -14,9 +14,19 @@ import {
 } from "./elements";
 import Image from "next/image";
 import { StyledSectionBigHeading } from "@/components/Typography/elements";
-import { Selection } from "@/app/page";
 
-interface CardProps {
+export type Selection = {
+  title: string;
+  description: string;
+  width: number;
+  height: number;
+  mobileWidth: number;
+  mobileHeight: number;
+  selectionColor: string;
+  logo: string;
+};
+
+export interface CardProps {
   backGroundImage: {
     src: string;
     alt: string;
@@ -71,21 +81,18 @@ const Card: React.FC<CardProps> = ({
                   selectionColor={selection.selectionColor}
                 >
                   <StyledSelectionImage>
-                    <Image
-                      layout="responsive"
-                      src={selection.logo}
-                      alt="brief"
-                      width={selection.logo.width}
-                      height={selection.logo.height}
-                    />
+                    <Image 
+                    src={selection.logo} alt={selection.title} width={50} height={50}/>
                   </StyledSelectionImage>
                   <StyledSelectionTextContainer>
                     <StyledSelectionTitle>
                       {selection.title}
                     </StyledSelectionTitle>
-                    <StyledSelectionDescription>
-                      {selection.description}
-                    </StyledSelectionDescription>
+                    <StyledSelectionDescription
+                      dangerouslySetInnerHTML={{
+                        __html: selection.description,
+                      }}
+                    ></StyledSelectionDescription>
                   </StyledSelectionTextContainer>
                 </StyledSingleSelection>
               );
