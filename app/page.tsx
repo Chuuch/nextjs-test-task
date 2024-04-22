@@ -1,10 +1,10 @@
 "use client";
-import Card from "@/sections/Card/Card";
 /* eslint-disable @next/next/no-page-custom-font */
-import Hero from "../sections/Hero/Hero";
+import { HeroProps } from "@/sections/Hero/Hero";
+import { Card, Hero } from "../sections";
+import { CardProps } from "@/sections/Card/Card";
+import { BriefIcon, SearchIcon, PitchIcon } from "../components";
 import "./page.module.css";
-import { CardProps } from "../sections/Card/Card";
-import { HeroProps } from "../sections/Hero/Hero";
 
 const heroProps: HeroProps = {
   image: {
@@ -43,7 +43,7 @@ const cardProps: CardProps = {
       mobileWidth: 500,
       mobileHeight: 32,
       selectionColor: "#FAFAFA",
-      logo: "/svgs/BriefLogo.svg",
+      logo: <BriefIcon />,
     },
     {
       title: "Search",
@@ -54,7 +54,7 @@ const cardProps: CardProps = {
       mobileWidth: 540,
       mobileHeight: 32,
       selectionColor: "#F5F5F5",
-      logo: "/svgs/SearchLogo.svg",
+      logo: <SearchIcon />,
     },
     {
       title: "Pitch",
@@ -65,7 +65,7 @@ const cardProps: CardProps = {
       mobileWidth: 580,
       mobileHeight: 32,
       selectionColor: "#ECECEC",
-      logo: "/svgs/PitchLogo.svg",
+      logo: <PitchIcon />,
     },
   ],
 };

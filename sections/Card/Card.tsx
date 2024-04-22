@@ -1,18 +1,4 @@
-import {
-  StyledContainer,
-  StyledCardContainer,
-  StyledSectionHeader,
-  StyledTextContainer,
-  StyledImageContainer,
-  StyledSelectionsContainer,
-  StyledSingleSelection,
-  StyledSelectionTitle,
-  StyledSelectionDescription,
-  StyledCardDescription,
-  StyledSelectionImage,
-  StyledSelectionTextContainer,
-} from "./elements";
-import Image from "next/image";
+import * as S from "./elements";
 import { StyledSectionBigHeading } from "@/components/Typography/elements";
 
 export type Selection = {
@@ -23,7 +9,7 @@ export type Selection = {
   mobileWidth: number;
   mobileHeight: number;
   selectionColor: string;
-  logo: string;
+  logo: React.ReactNode;
 };
 
 export interface CardProps {
@@ -53,26 +39,22 @@ const Card: React.FC<CardProps> = ({
   ...props
 }) => {
   return (
-    <StyledContainer>
-      <StyledSectionHeader {...props}>
-        <StyledTextContainer>
+    <S.StyledContainer>
+      <S.StyledSectionHeader {...props}>
+        <S.StyledTextContainer>
           <StyledSectionBigHeading>{sectionTitle}</StyledSectionBigHeading>
-          <StyledCardDescription>{sectionDescription}</StyledCardDescription>
-        </StyledTextContainer>
-        <StyledCardContainer backgroundImage={backGroundImage.src}>
-          <StyledImageContainer backgroundImage={backGroundImage.src}>
-            <Image
-              layout="responsive"
-              src={videoImage.src}
-              alt="video"
-              width={videoImage.width}
-              height={videoImage.height}
-            />
-          </StyledImageContainer>
-          <StyledSelectionsContainer>
+          <S.StyledCardDescription>
+            {sectionDescription}
+          </S.StyledCardDescription>
+        </S.StyledTextContainer>
+        <S.StyledCardContainer backgroundImage={backGroundImage.src}>
+          <S.StyledImageContainer
+            backgroundImage={backGroundImage.src}
+          ></S.StyledImageContainer>
+          <S.StyledSelectionsContainer>
             {selections.map((selection, index) => {
               return (
-                <StyledSingleSelection
+                <S.StyledSingleSelection
                   mobileWidth={selection.mobileWidth}
                   mobileHeight={selection.mobileHeight}
                   width={selection.width}
@@ -80,27 +62,26 @@ const Card: React.FC<CardProps> = ({
                   height={selection.height}
                   selectionColor={selection.selectionColor}
                 >
-                  <StyledSelectionImage>
-                    <Image 
-                    src={selection.logo} alt={selection.title} width={50} height={50}/>
-                  </StyledSelectionImage>
-                  <StyledSelectionTextContainer>
-                    <StyledSelectionTitle>
+                  <S.StyledSelectionImage>
+                    {selection.logo}
+                  </S.StyledSelectionImage>
+                  <S.StyledSelectionTextContainer>
+                    <S.StyledSelectionTitle>
                       {selection.title}
-                    </StyledSelectionTitle>
-                    <StyledSelectionDescription
+                    </S.StyledSelectionTitle>
+                    <S.StyledSelectionDescription
                       dangerouslySetInnerHTML={{
                         __html: selection.description,
                       }}
-                    ></StyledSelectionDescription>
-                  </StyledSelectionTextContainer>
-                </StyledSingleSelection>
+                    ></S.StyledSelectionDescription>
+                  </S.StyledSelectionTextContainer>
+                </S.StyledSingleSelection>
               );
             })}
-          </StyledSelectionsContainer>
-        </StyledCardContainer>
-      </StyledSectionHeader>
-    </StyledContainer>
+          </S.StyledSelectionsContainer>
+        </S.StyledCardContainer>
+      </S.StyledSectionHeader>
+    </S.StyledContainer>
   );
 };
 
