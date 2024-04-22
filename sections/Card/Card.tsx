@@ -1,3 +1,4 @@
+import Image from "next/image";
 import * as S from "./elements";
 import { StyledSectionBigHeading } from "@/components/Typography/elements";
 
@@ -6,8 +7,6 @@ export type Selection = {
   description: string;
   width: number;
   height: number;
-  mobileWidth: number;
-  mobileHeight: number;
   selectionColor: string;
   logo: React.ReactNode;
 };
@@ -48,15 +47,19 @@ const Card: React.FC<CardProps> = ({
           </S.StyledCardDescription>
         </S.StyledTextContainer>
         <S.StyledCardContainer backgroundImage={backGroundImage.src}>
-          <S.StyledImageContainer
-            backgroundImage={backGroundImage.src}
-          ></S.StyledImageContainer>
+          <S.StyledImageContainer backgroundImage={backGroundImage.src}>
+            <Image
+              layout="responsive"
+              src={videoImage.src}
+              alt={videoImage.alt}
+              width={videoImage.width}
+              height={videoImage.height}
+            />
+          </S.StyledImageContainer>
           <S.StyledSelectionsContainer>
             {selections.map((selection, index) => {
               return (
                 <S.StyledSingleSelection
-                  mobileWidth={selection.mobileWidth}
-                  mobileHeight={selection.mobileHeight}
                   width={selection.width}
                   key={index}
                   height={selection.height}

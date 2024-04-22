@@ -150,8 +150,6 @@ export const StyledSelectionsContainer = styled(
 export const StyledSingleSelection = styled(
   (
     props: React.HTMLAttributes<HTMLDivElement> & {
-      mobileWidth: number;
-      mobileHeight: number;
       width: number;
       height: number;
       selectionColor: string;
@@ -184,7 +182,6 @@ export const StyledSingleSelection = styled(
     align-items: center;
     justify-content: center;
     justify-items: center;
-    width: ${(props) => props.mobileWidth}px;
   }
 
   @media only screen and (max-width: 375px) {
@@ -193,8 +190,6 @@ export const StyledSingleSelection = styled(
     padding: 1rem;
     margin-left: auto;
     margin-right: auto;
-    width: ${(props) => props.mobileWidth}px;
-    height: ${(props) => props.mobileHeight}px;
   }
 
   @media only screen and (max-width: 414px) {
@@ -204,7 +199,6 @@ export const StyledSingleSelection = styled(
     margin-left: auto;
     margin-right: auto;
     max-width: 90%;
-    width: ${(props) => props.mobileWidth}px;
   }
 `;
 
