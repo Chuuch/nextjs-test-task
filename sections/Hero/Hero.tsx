@@ -10,7 +10,7 @@ import {
   StyledImageContainer,
 } from "./elements";
 
-interface HeroProps {
+export interface HeroProps {
   image: {
     src: string;
     alt: string;

@@ -1,19 +1,10 @@
 "use client";
-import Card from "@/sections/Card/Card";
 /* eslint-disable @next/next/no-page-custom-font */
-import Hero from "../sections/Hero/Hero";
+import { HeroProps } from "@/sections/Hero/Hero";
+import { Card, Hero } from "../sections";
+import { CardProps } from "@/sections/Card/Card";
+import { BriefIcon, SearchIcon, PitchIcon } from "../components";
 import "./page.module.css";
-interface HeroProps {
-  image: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
-  title: string;
-  description: string;
-  ctaText: string;
-}
 
 const heroProps: HeroProps = {
   image: {
@@ -26,40 +17,6 @@ const heroProps: HeroProps = {
   description: "Start the process here",
   ctaText: "Start",
 };
-
-export type Selection = {
-  title: string;
-  description: string;
-  width: number;
-  height: number;
-  mobileWidth: number;
-  mobileHeight: number;
-  selectionColor: string;
-  logo: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
-};
-
-interface CardProps {
-  backGroundImage: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
-  videoImage: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
-  sectionTitle: string;
-  sectionDescription: string;
-  selections: Selection[];
-}
 
 const cardProps: CardProps = {
   backGroundImage: {
@@ -80,50 +37,29 @@ const cardProps: CardProps = {
     {
       title: "Brief",
       description:
-        "Complete brief writing or simple guidance on what to include, we've got you covered.",
+        "Complete <b>brief writing or simple guidance</b> on what to include, we've got you covered.",
       width: 570,
       height: 32,
-      mobileWidth: 500,
-      mobileHeight: 32,
       selectionColor: "#FAFAFA",
-      logo: {
-        src: "/img/brief.png",
-        alt: "brief",
-        width: 32,
-        height: 32,
-      },
+      logo: <BriefIcon />,
     },
     {
       title: "Search",
       description:
-        "In-depth agency search covering; criteria matching, door knocking and due-dilligence vetting.",
-      width: 670,
+        "In-depth agency search covering; <b>criteria matching</b>, door knocking and due-dilligence vetting.",
+      width: 610,
       height: 32,
-      mobileWidth: 540,
-      mobileHeight: 32,
       selectionColor: "#F5F5F5",
-      logo: {
-        src: "/img/project.png",
-        alt: "project",
-        width: 24,
-        height: 24,
-      },
+      logo: <SearchIcon />,
     },
     {
       title: "Pitch",
       description:
-        "Comprehensive pitch management, including comms, diary management and pitch hosting",
+        "Comprehensive <b>pitch management</b>, including comms, diary management and pitch hosting",
       width: 650,
       height: 32,
-      mobileWidth: 580,
-      mobileHeight: 32,
       selectionColor: "#ECECEC",
-      logo: {
-        src: "/img/discuss.png",
-        alt: "discuss",
-        width: 24,
-        height: 24,
-      },
+      logo: <PitchIcon />,
     },
   ],
 };

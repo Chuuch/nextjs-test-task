@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SVGProps } from "react";
 import styled from "styled-components";
 
 interface StyledSectionContainerProps
@@ -150,8 +150,6 @@ export const StyledSelectionsContainer = styled(
 export const StyledSingleSelection = styled(
   (
     props: React.HTMLAttributes<HTMLDivElement> & {
-      mobileWidth: number;
-      mobileHeight: number;
       width: number;
       height: number;
       selectionColor: string;
@@ -164,28 +162,28 @@ export const StyledSingleSelection = styled(
   justify-items: center;
   align-items: center;
   min-height: 14rem;
-  background-color: #eeeeee;
   margin-bottom: 1rem;
   margin-top: 2rem;
-  padding: 2.6rem;
+  padding: 2rem;
   border-radius: 10px;
-  border: 0;
+  border: 3px solid transparent;
   box-sizing: border-box;
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
   background-color: ${(props) => props.selectionColor};
+  transform: scale(1, 1);
 
   &:hover {
     border: 3px solid #007fff;
     cursor: pointer;
     max-width: 100%;
+    transform: scale(1);
   }
 
   @media (max-width: 768px) {
     align-items: center;
     justify-content: center;
     justify-items: center;
-    width: ${(props) => props.mobileWidth}px;
   }
 
   @media only screen and (max-width: 375px) {
@@ -194,8 +192,6 @@ export const StyledSingleSelection = styled(
     padding: 1rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 90%;
-    width: ${(props) => props.mobileWidth}px;
   }
 
   @media only screen and (max-width: 414px) {
@@ -205,7 +201,6 @@ export const StyledSingleSelection = styled(
     margin-left: auto;
     margin-right: auto;
     max-width: 90%;
-    width: ${(props) => props.mobileWidth}px;
   }
 `;
 
@@ -214,6 +209,10 @@ export const StyledSelectionTextContainer = styled(
 )`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
+  margin-top: 2rem;
 `;
 
 export const StyledSelectionTitle = styled(
@@ -232,9 +231,9 @@ export const StyledSelectionTitle = styled(
 
   @media (max-width: 375px) {
     font-family: Poppins;
-    font-size: 1.2rem;
-    line-height: 4.375rem;
-    font-weight: 600;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 400;
     margin-left: 2.5rem;
   }
 
@@ -244,6 +243,7 @@ export const StyledSelectionTitle = styled(
     line-height: 4.375rem;
     font-weight: 600;
     margin-left: 2.5rem;
+    padding-top: 1rem;
   }
 `;
 
@@ -255,6 +255,7 @@ export const StyledSelectionDescription = styled(
   line-height: 1.7rem;
   font-weight: 500;
   margin-left: 2.5rem;
+  margin-bottom: 2rem;
 
   @media (max-width: 375px) {
     display: flex;
@@ -263,7 +264,7 @@ export const StyledSelectionDescription = styled(
     font-size: 0.8rem;
     line-height: 1rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    padding-bottom: 2rem;
   }
 
   @media (max-width: 414px) {
@@ -273,10 +274,10 @@ export const StyledSelectionDescription = styled(
     font-size: 0.8rem;
     line-height: 0.9rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 768) {
     display: flex;
     flex-direction: column;
     font-family: Poppins;
