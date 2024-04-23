@@ -166,16 +166,18 @@ export const StyledSingleSelection = styled(
   margin-top: 2rem;
   padding: 2rem;
   border-radius: 10px;
-  border: 0;
+  border: 3px solid transparent;
   box-sizing: border-box;
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
   background-color: ${(props) => props.selectionColor};
+  transform: scale(1, 1);
 
   &:hover {
     border: 3px solid #007fff;
     cursor: pointer;
     max-width: 100%;
+    transform: scale(1);
   }
 
   @media (max-width: 768px) {
