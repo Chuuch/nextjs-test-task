@@ -13,6 +13,7 @@ export const StyledContainer = styled(
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 5rem auto;
 `;
 
 export const StyledSectionHeader = styled.div<StyledSectionContainerProps>`
@@ -51,60 +52,45 @@ export const StyledCardContainer = styled(
   display: flex;
   margin-top: 5rem;
   margin-bottom: 15rem;
-  background-image: url(${(props) => props.backgroundImage});
+  margin: 5rem auto;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  background-image: ${(props) => props.backgroundImage};
   background-repeat: no-repeat;
-  background-size: contain;
-
-  @media (max-width: 1440px) {
-    display: flex;
-    flex-direction: row;
-  }
 
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
-  }
-
-  @media (max-width: 768px) {
-    position: relative;
-    background-image: url(${(props) => props.backgroundImage});
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
   }
 `;
 
 export const StyledImageContainer = styled(
-  (
-    props: React.HTMLAttributes<HTMLDivElement> & { backgroundImage: string }
-  ) => <div {...props} />
+  (props: React.HTMLAttributes<HTMLDivElement>) => <div {...props} />
 )`
   display: flex;
-  flex-direction: row;
-  max-width: 32.03rem;
-  max-height: 65rem;
-  width: 100%;
-  height: 100%;
-  margin-left: 24rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-
-  @media (max-width: 1440px) {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-  }
+  justify-content: center;
+  align-items: center;
+  width: 520px;
 
   @media (max-width: 1024px) {
     flex-direction: column;
-    margin-left: 12rem;
   }
+`;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+export const StyledCardTitle = styled(
+  (props: React.HTMLAttributes<HTMLDivElement>) => <div {...props} />
+)`
+  font-family: Poppins;
+  font-size: 2.4rem;
+  font-weight: 500;
+
+  @media (max-width: 414px) {
+    font-size: 1rem;
+    margin-top: 1rem;
   }
 `;
 
@@ -128,22 +114,12 @@ export const StyledSelectionsContainer = styled(
   justify-content: center;
   justify-items: center;
   max-width: 1920px;
-  margin-left: 6rem;
   box-sizing: border-box;
+  margin-left: 6rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  @media (max-width: 375px) {
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-
-  @media (max-width: 414px) {
-    margin-left: 0rem;
-    margin-right: 0rem;
   }
 `;
 
@@ -219,7 +195,7 @@ export const StyledSelectionTitle = styled(
   (props: React.HTMLAttributes<HTMLDivElement>) => <div {...props} />
 )`
   font-family: Poppins;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 4.375rem;
   font-weight: 600;
   margin-left: 2.5rem;
@@ -251,7 +227,7 @@ export const StyledSelectionDescription = styled(
   (props: React.HTMLAttributes<HTMLDivElement>) => <div {...props} />
 )`
   font-family: Poppins;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.7rem;
   font-weight: 500;
   margin-left: 2.5rem;
