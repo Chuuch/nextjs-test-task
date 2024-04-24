@@ -5,11 +5,9 @@ import { StyledSectionSubheading } from "./elements";
 interface SectionSubheadingProps
   extends React.HTMLAttributes<HTMLHeadingElement> {}
 
-const SectionSubheading = React.forwardRef<
+export const SectionSubheading = React.forwardRef<
   HTMLHeadingElement,
   SectionSubheadingProps
 >((props, ref) => {
   return <StyledSectionSubheading {...props} ref={ref} />;
 });
-
-export default SectionSubheading;
