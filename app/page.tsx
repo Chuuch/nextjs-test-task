@@ -3,7 +3,7 @@
 import { HeroProps } from "@/sections/Hero/Hero";
 import { Card, Hero } from "../sections";
 import { CardProps } from "@/sections/Card/Card";
-import { BriefIcon, SearchIcon, PitchIcon } from "../components";
+import { BriefIcon, SearchIcon, PitchIcon } from "../components/Svgs";
 import "./page.module.css";
 
 const heroProps: HeroProps = {
@@ -28,8 +28,8 @@ const cardProps: CardProps = {
   videoImage: {
     src: "/img/video.png",
     alt: "video",
-    width: 1920,
-    height: 720,
+    width: 394,
+    height: 550,
   },
   sectionTitle: "Managed agency selection",
   sectionDescription: "Strengthen your onboarding process",
@@ -38,8 +38,6 @@ const cardProps: CardProps = {
       title: "Brief",
       description:
         "Complete <b>brief writing or simple guidance</b> on what to include, we've got you covered.",
-      width: 570,
-      height: 32,
       selectionColor: "#FAFAFA",
       logo: <BriefIcon />,
     },
@@ -47,8 +45,6 @@ const cardProps: CardProps = {
       title: "Search",
       description:
         "In-depth agency search covering; <b>criteria matching</b>, door knocking and due-dilligence vetting.",
-      width: 610,
-      height: 32,
       selectionColor: "#F5F5F5",
       logo: <SearchIcon />,
     },
@@ -56,8 +52,6 @@ const cardProps: CardProps = {
       title: "Pitch",
       description:
         "Comprehensive <b>pitch management</b>, including comms, diary management and pitch hosting",
-      width: 650,
-      height: 32,
       selectionColor: "#ECECEC",
       logo: <PitchIcon />,
     },
