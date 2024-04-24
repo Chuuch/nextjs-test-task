@@ -4,12 +4,14 @@ import * as S from "./elements";
 export type Selection = {
   title: string;
   description: string;
+  height: number;
+  width: number;
   selectionColor: string;
   logo: React.ReactNode;
 };
 
 export interface CardProps {
-  backGroundImage: {
+  backgroundImage: {
     src: string;
     alt: string;
     width: number;
@@ -27,20 +29,20 @@ export interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({
-  backGroundImage,
+  backgroundImage,
   videoImage,
   sectionTitle,
   sectionDescription,
   selections,
   ...props
 }) => (
-  <S.StyledContainer backgroundImage={backGroundImage.src}>
+  <S.StyledContainer>
     <S.StyledSectionHeader {...props}>
       <S.StyledTextContainer>
-        <S.StyledSelectionTitle>{sectionTitle}</S.StyledSelectionTitle>
+        <S.StyledCardTitle>{sectionTitle}</S.StyledCardTitle>
         <S.StyledCardDescription>{sectionDescription}</S.StyledCardDescription>
       </S.StyledTextContainer>
-      <S.StyledCardContainer>
+      <S.StyledCardContainer backgroundImage={backgroundImage.src}>
         <S.StyledImageContainer>
           <Image
             layout="responsive"
@@ -56,6 +58,8 @@ const Card: React.FC<CardProps> = ({
               <S.StyledSingleSelection
                 key={index}
                 selectionColor={selection.selectionColor}
+                width={selection.width}
+                height={selection.height}
               >
                 <S.StyledSelectionImage>
                   {selection.logo}
