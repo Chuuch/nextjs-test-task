@@ -19,7 +19,7 @@ const heroProps: HeroProps = {
 };
 
 const cardProps: CardProps = {
-  backGroundImage: {
+  backgroundImage: {
     src: "/img/background.png",
     alt: "background",
     width: 1920,
@@ -28,8 +28,8 @@ const cardProps: CardProps = {
   videoImage: {
     src: "/img/video.png",
     alt: "video",
-    width: 394,
-    height: 550,
+    width: 280,
+    height: 450,
   },
   sectionTitle: "Managed agency selection",
   sectionDescription: "Strengthen your onboarding process",
@@ -38,6 +38,8 @@ const cardProps: CardProps = {
       title: "Brief",
       description:
         "Complete <b>brief writing or simple guidance</b> on what to include, we've got you covered.",
+      width: 450,
+      height: 30,
       selectionColor: "#FAFAFA",
       logo: <BriefIcon />,
     },
@@ -45,6 +47,8 @@ const cardProps: CardProps = {
       title: "Search",
       description:
         "In-depth agency search covering; <b>criteria matching</b>, door knocking and due-dilligence vetting.",
+      width: 475,
+      height: 30,
       selectionColor: "#F5F5F5",
       logo: <SearchIcon />,
     },
@@ -52,7 +56,10 @@ const cardProps: CardProps = {
       title: "Pitch",
       description:
         "Comprehensive <b>pitch management</b>, including comms, diary management and pitch hosting",
+      width: 500,
+      height: 30,
       selectionColor: "#ECECEC",
+
       logo: <PitchIcon />,
     },
   ],
