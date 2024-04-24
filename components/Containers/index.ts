@@ -1,1 +1,1 @@
-export { default as SectionContainer } from "./SectionContainer/SectionContainer";
+export * from "./SectionContainer";

@@ -1,14 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import {
-  StyledTextContainer,
-  StyledContainer,
-  StyledGetStartedBtn,
-  StyledTitle,
-  StyledDescription,
-  StyledCTAContainer,
-  StyledImageContainer,
-} from "./elements";
+import * as S from "./elements";
 
 export interface HeroProps {
   image: {
@@ -30,15 +22,15 @@ const Hero: React.FC<HeroProps> = ({
   ...props
 }) => {
   return (
-    <StyledContainer {...props}>
-      <StyledTextContainer>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledDescription>{description}</StyledDescription>
-        <StyledCTAContainer>
-          <StyledGetStartedBtn>{ctaText}</StyledGetStartedBtn>
-        </StyledCTAContainer>
-      </StyledTextContainer>
-      <StyledImageContainer>
+    <S.StyledContainer {...props}>
+      <S.StyledTextContainer>
+        <S.StyledTitle>{title}</S.StyledTitle>
+        <S.StyledDescription>{description}</S.StyledDescription>
+        <S.StyledCTAContainer>
+          <S.StyledGetStartedBtn>{ctaText}</S.StyledGetStartedBtn>
+        </S.StyledCTAContainer>
+      </S.StyledTextContainer>
+      <S.StyledImageContainer>
         <Image
           layout="responsive"
           src={image.src}
@@ -46,8 +38,8 @@ const Hero: React.FC<HeroProps> = ({
           width={image.width}
           height={image.height}
         />
-      </StyledImageContainer>
-    </StyledContainer>
+      </S.StyledImageContainer>
+    </S.StyledContainer>
   );
 };
 

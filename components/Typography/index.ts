@@ -1,6 +1,6 @@
-export { default as SectionBigHeading } from "./SectionBigHeading";
-export { default as SectionHeading } from "./SectionHeading";
-export { default as SectionSubheading } from "./SectionSubheading";
-export { default as SectionInnerHeading } from "./SectionInnerHeading";
-export { default as SectionParagraph } from "./SectionParagraph";
-export { default as SectionTinyHeading } from "./SectionTinyHeading";
+export * from "./SectionBigHeading";
+export * from "./SectionHeading";
+export * from "./SectionInnerHeading";
+export * from "./SectionParagraph";
+export * from "./SectionSubheading";
+export * from "./SectionTinyHeading";

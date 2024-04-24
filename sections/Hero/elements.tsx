@@ -1,6 +1,9 @@
 import { StyledButton } from "@/components/Button/elements";
-import { SectionContainer } from "@/components/Containers";
-import { SectionBigHeading, SectionSubheading } from "@/components/Typography";
+import SectionContainer from "@/components/Containers/SectionContainer/SectionContainer";
+import {
+  SectionBigHeading,
+  SectionSubheading,
+} from "../../components/Typography";
 import styled from "styled-components";
 
 interface ContainerProps {
