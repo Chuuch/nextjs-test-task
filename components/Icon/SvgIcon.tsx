@@ -12,7 +12,7 @@ export const SvgIcon = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox={viewBox || "0 0 24 24"}
-      width={size || width || 52}
+      width={size || width || 64}
       height={size || height || 64}
       {...props}
     >
