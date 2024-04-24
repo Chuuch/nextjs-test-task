@@ -1,4 +1,4 @@
-import React, { SVGProps } from "react";
+import React from "react";
 import styled from "styled-components";
 
 interface StyledSectionContainerProps
@@ -54,9 +54,9 @@ export const StyledCardContainer = styled(
   margin-bottom: 15rem;
   margin: 5rem auto;
   justify-content: center;
-  max-width: 1200px;
   width: 100%;
-  background-image: ${(props) => props.backgroundImage};
+  background-image: url("./img/background.png");
+  background-size: contain;
   background-repeat: no-repeat;
 
   @media (max-width: 1024px) {
